@@ -12,16 +12,31 @@ function getRandomAlphabet() {
     const randomNumber = Math.random() * 25;
     const index = Math.round(randomNumber);
     const alphabet = alphabetArray[index];
-    console.log(alphabet);
     return alphabet;
-
 }
 
+function getBackgroundColorById(elementID) {
+    const element = document.getElementById(elementID);
+    element.classList.add('bg-orange-400');
+}
+// keyboard input function
+function handleKeyboardButtonPress() {
+    console.log('button pressed');
+    document.addEventListener('keyup', handleKeyboardButtonPress);
+}
+
+
 function play() {
+    // hide home
     hideById('home');
+    // jump to playground
     addById('playGround');
+    // display random alphabet
     const alphabet = getRandomAlphabet();
     const alphabetElement = document.getElementById('currentAlphabet');
     alphabetElement.innerText = alphabet;
+    // alphabet background color
+    getBackgroundColorById(alphabet);
+
 
 }
