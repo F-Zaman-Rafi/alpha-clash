@@ -24,14 +24,14 @@
             </div>
         </section>
         <!-- playGround -->
-        <section id="playGround" class=" flex flex-col gap-8 hidden">
+        <section id="playGround" onclick="getRandomAlphabet()" class=" flex flex-col gap-8 hidden">
             <!-- screen -->
             <div class="artboard artboard-horizontal phone-6 border-8 border-[#010313CC] bg-[#FFFFFFB3]">
                 <div class="flex justify-center">
                     <p class="bg-[#2F2941] px-4 py-2 rounded-b-xl">Don't watch keyboard while playing...</p>
                 </div>
                 <div class="flex flex-col h-full justify-center ">
-                    <h1 class="text-9xl text-black">Y</h1>
+                    <h1 id="currentAlphabet" class="text-9xl text-black">Y</h1>
                 </div>
             </div>
             <!-- KEYBOARD -->
